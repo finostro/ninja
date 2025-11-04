@@ -15,6 +15,7 @@
 #ifndef NINJA_BUILD_H_
 #define NINJA_BUILD_H_
 
+#include <cstdint>
 #include <cstdio>
 #include <map>
 #include <memory>
@@ -190,6 +191,7 @@ struct BuildConfig {
   /// The maximum load average we must not exceed. A negative value
   /// means that we do not have any limit.
   double max_load_average = -0.0f;
+  int64_t max_used_memory = 0;
   DepfileParserOptions depfile_parser_options;
 };
 
